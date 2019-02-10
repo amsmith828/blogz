@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+        <form method="POST">
+            <hr />
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="text" name="title" placeholder="Blog Title" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea name="body" cols="50" rows="10" placeholder="Blog Body" required></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Create Blog" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+{% endblock %}
