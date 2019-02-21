@@ -8,10 +8,18 @@
     </head>
 <body>
 
-    <div>
+    <div align="center">
         <a href='/' >Main Blog Page</a>
         &nbsp &nbsp
         <a href='/newpost' >Add a Blog Entry</a>
+        &nbsp &nbsp
+        <a href='/users' >Users</a>
+        &nbsp &nbsp
+        {% if 'username' not in session %}
+        <a href='/login' >Login</a>
+        {% else %}
+        <a href='/logout' >Logout</a>
+        {% endif %}
     </div>
 
 <h1 align="center">Build a Blog</h1>
