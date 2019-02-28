@@ -103,7 +103,7 @@ def blog():
 
     else:
         blogs = Blog.query.all()
-        return render_template('blog.html', blogs=blogs, title="Build a Blog")
+        return render_template('blog.html', blogs=blogs, title="Blogz")
 
 
 @app.route('/newpost', methods=['POST', 'GET'])

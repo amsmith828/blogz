@@ -1,28 +1,30 @@
 <!doctype html>
 <html>
     <head>
-        <style>
-            .error { color: red; }
-        </style>
-        <title>{{title}}</title>
+        <title>Blogz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     </head>
 <body>
+    <div class="row" align="center">
+        <div class="col-sm-3"><a href='/' >Main Blog Page</a></div>
 
-    <div align="center">
-        <a href='/' >Main Blog Page</a>
-        &nbsp &nbsp
-        <a href='/newpost' >Add a Blog Entry</a>
-        &nbsp &nbsp
-        <a href='/users' >Users</a>
-        &nbsp &nbsp
+        <div class="col-sm-3"><a href='/newpost' >Add a Blog Entry</a></div>
+
+        <div class="col-sm-3"><a href='/users' >Users</a></div>
+
         {% if 'username' not in session %}
-        <a href='/login' >Login</a>
+        <div class="col-sm-3"><a href='/login' >Login</a></div>
         {% else %}
-        <a href='/logout' >Logout</a>
+        <div class="col-sm-3"><a href='/logout' >Logout</a></div>
         {% endif %}
     </div>
-
-<h1 align="center">Build a Blog</h1>
+    <div class="jumbotron text-center">
+        <h1>Blogz</h1>
+    </div>
     {% block content %}
 
 
